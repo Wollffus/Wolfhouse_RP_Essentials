@@ -1,9 +1,10 @@
-fx_version 'bodacious'
-game 'gta5'
+fx_version 'cerulean'
+games { 'rdr3', 'gta5' }
 
-author 'Wollffus'
-version '2.4.2'
-description 'Several Client sided actions packed'
+author 'https://discord.gg/zGVDppYxfk'
+version '2.1.5'
+
+rdr3_warning 'I acknowledge that this is a prerelease build of RedM, and I am aware my resources *will* become incompatible once RedM ships.'
 
 client_script "wolfhouse.lua"
 
