@@ -1,3 +1,7 @@
+-- Get weapon Hash
+--print(GetHashKey("WEAPON_SR25"))
+--print(GetHashKey("WEAPON_m700"))
+
 ---------------------------------------------------------------------------------------------------------- Player IDs above head using F5
 local showPlayerBlips = false
 local ignorePlayerNameDistance = false
