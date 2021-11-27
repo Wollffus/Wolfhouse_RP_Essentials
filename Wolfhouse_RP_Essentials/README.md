@@ -5,7 +5,7 @@
 - Add the Wolfhouse_RP_Essentials file to your server resources directory
 - Add `ensure Wolfhouse_RP_Essentials` to your `server.cfg` file.
 
-This file has 22 different functions packed into one. Just comment out any of the ones you dont want to use if any in the Wolfhouse.lua
+This file has 23 different functions packed into one. Just comment out any of the ones you dont want to use if any in the Wolfhouse.lua
 
 Example of how to comment out:
 
@@ -23,6 +23,7 @@ N_0x4757f00bc6323cfe(GetHashKey("WEAPON_UNARMED"), 0.4)              <---------W
 end)]] <------------- These two brackets here
 
 Features:
+Weapon hash finder
 Toggle player IDs above head (F5)
 Helicopter HUD and Takeoff/Landing Control
 Disable Dispatch
