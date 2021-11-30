@@ -1,26 +1,13 @@
-# Ditial Life RP
+### Ditial Life RP ###
+23 Different functions in one simple resource.
+Config with easy to use True/False setup and comments to understand what each one does.
 
+### Start of Installation ###
 
-### Installation
 - Add the Wolfhouse_RP_Essentials file to your server resources directory
 - Add `ensure Wolfhouse_RP_Essentials` to your `server.cfg` file.
 
-This file has 23 different functions packed into one. Just comment out any of the ones you dont want to use if any in the Wolfhouse.lua
-
-Example of how to comment out:
-
-These two dashes and two brackets here-------------->--[[
-
---Mele and weapon Damage
-
-Citizen.CreateThread(function()
-  while true do
-N_0x4757f00bc6323cfe(GetHashKey("WEAPON_UNARMED"), 0.4)              <---------Whatever you comment out in between the two top dashes and brackets and the two lower brackets>
-    Wait(0)
-    N_0x4757f00bc6323cfe(GetHashKey("WEAPON_NIGHTSTICK"), 0.7)
-    Wait(0)
-  end
-end)]] <------------- These two brackets here
+### End of Installation ###
 
 Features:
 Weapon hash finder
