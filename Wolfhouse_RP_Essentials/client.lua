@@ -1,3 +1,5 @@
+function disableActions()
+
 ---------------------------------------------------------------------------------------------------------- Get weapon Hash
 -- print(GetHashKey("WEAPON_SR25"))
 -- print(GetHashKey("WEAPON_m700"))
@@ -252,45 +254,9 @@ if Trigger.HELI then
 end
 ---------------------------------------------------------------------------------------------------------- Disable Dispatch
 if Trigger.DISPATCH then
-	Citizen.CreateThread(function()
-		Wait(0)
-		EnableDispatchService(1, false)
-		EnableDispatchService(2, false)
-		EnableDispatchService(3, false)
-		EnableDispatchService(4, false)
-		EnableDispatchService(5, false)
-		EnableDispatchService(6, false)
-		EnableDispatchService(7, false)
-		EnableDispatchService(8, false)
-		EnableDispatchService(9, false)
-		EnableDispatchService(10, false)
-		EnableDispatchService(11, false)
-		EnableDispatchService(12, false)
-		SetPlayerWantedLevel(PlayerId(), 0, false)
-		SetPlayerWantedLevelNow(PlayerId(), false)
-		SetPlayerWantedLevelNoDrop(PlayerId(), 0, false)
-		DisablePlayerVehicleRewards(-1)
-	end)
-
-	Citizen.CreateThread(function()
-		while true do
-			Wait(0)
-			RemoveVehiclesFromGeneratorsInArea(408.41 - 100.0, -994.21 - 100.0, 29.0 - 100.0, 408.41 + 100.0, -994.21 + 100.0, 29.0 + 100.0)
-			RemoveVehiclesFromGeneratorsInArea(1405.14 - 100.0, 1120.8 - 100.0, 114.8 - 100.0, 1405.14 + 100.0, 1120.8 + 100.0, 114.8 + 100.0)
-			RemoveVehiclesFromGeneratorsInArea(535.38 - 100.0, -192.28 - 100.0, 53.94 - 100.0, 535.38 + 100.0, -192.28 + 100.0, 53.94 + 100.0)
-			RemoveVehiclesFromGeneratorsInArea(581.44 - 100.0, 38.82 - 100.0, 92.5 - 100.0, 581.44 + 100.0, 38.82 + 100.0, 92.5 + 100.0)
-		end
-	end)
-
-	Citizen.CreateThread(function()
-		while true do
-			Wait(1)
-
-			RemoveAllPickupsOfType(GetHashKey('PICKUP_WEAPON_CARBINERIFLE'))
-			RemoveAllPickupsOfType(GetHashKey('PICKUP_WEAPON_PISTOL'))
-			RemoveAllPickupsOfType(GetHashKey('PICKUP_WEAPON_PUMPSHOTGUN'))
-		end
-	end)
+  for i = 1, 12 do
+    EnableDispatchService(i, false)
+	end
 end
 ---------------------------------------------------------------------------------------------------------- Make NPCs Hostile
 if Trigger.HOSTILENPC then
@@ -322,18 +288,8 @@ end
 ----------------------------------------------------------------------------------------------------------  Enable PvP
 
 if Trigger.PVP then
-	Citizen.CreateThread(function()
-		while true do
-			Wait(0)
-
-			local player = PlayerId()
-			local playerPed = PlayerPedId()
-
-			NetworkSetFriendlyFireOption(true)
-			SetCanAttackFriendly(playerPed, true, true)
-
-		end
-	end)
+  SetCanAttackFriendly(PlayerPedId(), true, false)
+  NetworkSetFriendlyFireOption(true)
 end
 ---------------------------------------------------------------------------------------------------------- Walk injured when hurt, seek medical attention
 
@@ -464,12 +420,8 @@ end
 
 ----------------------------------------------------------------------------------------------------------  Disable Idle Cinamatic Cam
 if Trigger.IDLECAM then
-	Citizen.CreateThread(function()
-		while true do
-			N_0xf4f2c0d4ee209e20()
-			Wait(1000)
-		end
-	end)
+  DisableIdleCamera(true)
+	end
 end
 ----------------------------------------------------------------------------------------------------------  Lower Ammunation ambiant sound (loud gun shots constantly)
 
@@ -667,13 +619,8 @@ end
 
 ---------------------------------------------------------------------------------------------------------- No Weapons From vehicle
 if Trigger.NOVIC then
-	Citizen.CreateThread(function()
-		while true do
-			Citizen.Wait(1)
-			id = PlayerId()
-			DisablePlayerVehicleRewards(id)
-		end
-	end)
+  DisablePlayerVehicleRewards(PlayerPedId())
+	end
 end
 
 ---------------------------------------------------------------------------------------------------------- Assisted Aim Disable
