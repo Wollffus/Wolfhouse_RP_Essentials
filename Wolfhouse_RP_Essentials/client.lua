@@ -1,6 +1,24 @@
 ---------------------------------------------------------------------------------------------------------- Get weapon Hash
 -- print(GetHashKey("WEAPON_SR25"))
 -- print(GetHashKey("WEAPON_m700"))
+
+---------------------------------------------------------------------------------------------------------- Snowing always
+if Trigger.SNOWFALL then
+	Citizen.CreateThread(function()
+    	while true
+        	do
+
+    	SetWeatherTypePersist("XMAS")
+        	SetWeatherTypeNowPersist("XMAS")
+        	SetWeatherTypeNow("XMAS")
+        	SetOverrideWeather("XMAS")
+        	SetForcePedFootstepsTracks(true)
+		SetForceVehicleTrails(true)
+        	Citizen.Wait(1)
+    	end
+
+	end)
+end
 ---------------------------------------------------------------------------------------------------------- Player IDs above head using F5
 if Trigger.PID then
 	local showPlayerBlips = false
