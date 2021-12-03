@@ -619,8 +619,13 @@ end
 
 ---------------------------------------------------------------------------------------------------------- No Weapons From vehicle
 if Trigger.NOVIC then
-  DisablePlayerVehicleRewards(PlayerPedId())
-	end
+	Citizen.CreateThread(function()
+		while true do
+			Citizen.Wait(1)
+			id = PlayerId()
+			DisablePlayerVehicleRewards(id)
+		end
+	end)
 end
 
 ---------------------------------------------------------------------------------------------------------- Assisted Aim Disable
