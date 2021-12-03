@@ -567,16 +567,7 @@ if Trigger.HEADSHOTS then
 	Citizen.CreateThread(function()
 		while true do
 			Wait(5)
-
 			SetPedSuffersCriticalHits(PlayerPedId(), false)
-		end
-	end)
-
-	Citizen.CreateThread(function()
-		while true do
-			ManageReticle()
-
-			Citizen.Wait(0)
 		end
 	end)
 end
