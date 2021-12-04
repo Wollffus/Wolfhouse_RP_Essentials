@@ -27,5 +27,6 @@ Trigger = {
     AIMASSISTREMOVE = true, -- True to remove aim assist on controllers. False to allow
     DRIVEBY = true, -- True to stop players from shooting from a moving vehicle going above 30mph. False to diable.(Find the lines below in client.lua and change 30 to whatever speed you want set)
                     --	if math.floor(speed * mph) > 30 then
-    SNOWFALL = false -- True makes snow all the time, false disables this
+    SNOWFALL = true, -- True makes snow all the time, false disables this
+    TIRESMOKE = true -- Enables thicker tire smoke, for burnouts and drifting
 }
