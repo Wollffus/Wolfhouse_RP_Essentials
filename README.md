@@ -1,6 +1,7 @@
 ### Ditial Life RP ###
-23 Different functions in one simple resource.
-Config with easy to use True/False setup and comments to understand what each one does.
+25 Different functions in one simple resource.
+This is a collection of code gathered from several different places, and combined into one easy to use script with a Config.
+Easy to activate/deactivate True/False setup and comments to understand what each one does.
 
 ### Start of Installation ###
 
@@ -10,6 +11,7 @@ Config with easy to use True/False setup and comments to understand what each on
 ### End of Installation ###
 
 Features:
+Snowfall 
 Weapon hash finder
 Toggle player IDs above head (F5)
 Helicopter HUD and Takeoff/Landing Control
@@ -33,3 +35,4 @@ Disables weapon drops (NPC dont drop weapons when killed)
 Aim Assist (disabled)
 Disables shooting from car (can change to drive by option with speed set)
 Adjust Ped density
+Tire SMoke
