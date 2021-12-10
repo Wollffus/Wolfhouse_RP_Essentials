@@ -29,4 +29,5 @@ Trigger = {
                     --	if math.floor(speed * mph) > 30 then
     SNOWFALL = true, -- True makes snow all the time, false disables this
     TIRESMOKE = true -- Enables thicker tire smoke, for burnouts and drifting
+    HANDSUP = true -- Enables the handsup emote by using the Y keybind
 }
